@@ -1,0 +1,17 @@
+[
+   {
+     "deviceType": "emulator",
+     "caps": {
+       "automationName": "UiAutomator2",
+       "platformName": "android",
+       "platformVersion": "11.0",
+       "deviceName": "Emulator_Pixel_5",
+       "app": "src/main/resources/testApp.apk",
+       "appPackage": "io.selendroid.testapp",
+       "appActivity": "io.selendroid.testapp.HomeScreenActivity",
+       "noReset": false,
+       "fullReset": false,
+       "autoGrantPermissions": true
+     }
+   }
+]

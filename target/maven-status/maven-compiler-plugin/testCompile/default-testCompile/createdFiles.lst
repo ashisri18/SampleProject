@@ -1,0 +1,9 @@
+com/sample/pageObject/registration/RegistrationAction.class
+com/sample/pageObject/registration/RegistrationActivity.class
+com/sample/pageObject/touchActions/TouchActionsAction.class
+com/sample/testScript/Scripts.class
+com/sample/pageObject/chromeWebView/ChromeWebViewActivity.class
+com/sample/pageObject/homePage/HomePageAction.class
+com/sample/pageObject/touchActions/TouchActionsActivity.class
+com/sample/pageObject/chromeWebView/ChromeWebViewAction.class
+com/sample/pageObject/homePage/HomePageActivity.class

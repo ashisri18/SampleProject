@@ -1,0 +1,22 @@
+#!/bin/bash
+# If "ANDROID_HOME" path variable not defined in your machine, Uncomment below line and give Path for Android SDK.
+#ANDROID_HOME="<Absolute Path till before Android folder>/Android/sdk"
+# Give the emulator name created in your machine
+EMULATOR_NAME="Pixel_5_API_30"
+deviceId="$(adb devices | awk 'NR==2' | awk '{print $1}')"
+if [ -z $deviceId ]
+then
+	echo "Run emulator in new Terminal"
+	osascript -e "tell app \"Terminal\"
+   	do script \"$ANDROID_HOME/emulator/emulator -avd $EMULATOR_NAME\"
+	end tell"
+# Wait for 5 seconds to launch emulator, if taking extra time change below value.
+	sleep 5
+	echo "Emulator launched successfully."
+	deviceId="$(adb devices | awk 'NR==2' | awk '{print $1}')"
+fi
+echo connected Devices Id is- $deviceId
+BASEDIR=$(dirname $0)
+echo "Script location: ${BASEDIR}"
+cd ${BASEDIR}
+mvn clean test
